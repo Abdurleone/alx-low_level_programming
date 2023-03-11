@@ -10,7 +10,7 @@
 int check_num(char *str)
 {
 	/*Declaring variables*/
-	Densigned int count;
+	signed int count;
 	count = 0;
 	while (count < strlen(str)) /*count string*/
 	{
