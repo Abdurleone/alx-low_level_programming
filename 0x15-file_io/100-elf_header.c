@@ -52,7 +52,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	print(" Magic: ");
+	printf(" Magic: ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -74,7 +74,7 @@ void print_class(unsigned char *e_ident)
 {
 	print(" Class: ");
 
-	switch (e_ident[EL_CLASS])
+	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
 			printf("none\n");
@@ -120,7 +120,7 @@ void print_data(unsigned char *e_ident)
  * @e_ident: A pointer to an array containing the ELF version.
  */
 
-void print_version(unsigned char e_ident)
+void print_version(unsigned char *e_ident)
 {
 	printf(" Version: %d",
 			e_ident[EI_VERSION]);
