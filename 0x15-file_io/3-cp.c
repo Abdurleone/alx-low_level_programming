@@ -1,74 +1,74 @@
 #include "main.h"
-#include <stdio.h>
+#define BUFFER_SIZE 1024
 
 /**
- * error_file - checks if files can be opened.
- * @file_from: file_from.
- * @file_to: file_to.
- * @argv: arguments vector.
- * Return: no return.
+ * close_w - close function
+ * @fdread: read
+ * @fdwrite: write
  */
 
-void error_file(int file_from, int file_to, char *argv[])
+void close_w(int fdread, int fdwrite)
 {
-	if (file_from == -1)
+	if (close(fdwrite) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdwrite);
+		exit(100);
 	}
-	if (file_to == -1)
+	if (close(fdread) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdread);
+		exit(100);
 	}
 }
 
 /**
- * main - check the code for ALX school students.
- * @argc: number of arguments.
- * @argv: arguments vector.
- * Return: Always 0.
+ * main - Function that copies the content of another file
+ * @argc: argument of count
+ * @argv: argument of array
+ * Return: exit_success if success, exit 97, 98, 99, 100
  */
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, err_close;
-	ssize_t nchars, nwr;
-	char buf[1024];
+	char buffer[BUFFER_SIZE];
+	char *file_from, *file_to;
+	int fdread, fdwrite;
+	ssize_t rd = 1024, wr;
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
-	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_from, file_to, argv);
-
-	nchars = 1024;
-	while (nchars == 1024)
+	file_from = argv[1];
+	file_to = argv[2];
+	fdread = open(file_from, O_RDONLY);
+	if (fdread == -1)
 	{
-		nchars = read(file_from, buf, 1024);
-		if (nchars == -1)
-			error_file(-1, 0, argv);
-		nwr = write(file_to, buf, nchars);
-		if (nw == -1)
-			error_file(0, -1, argv);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
-
-	err_close = close(file_from);
-	if (err_close == -1)
+	fdwrite = open(file_to, O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
+	if (fdwrite == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-		exit(100);
+		dprintf(SRERR_FILENO, "Error: Can't write to %s\n", file_to);
+		exit(99);
 	}
-
-	err_close = close(file_to);
-	if (err_close == -1)
+	while (rd == BUFFER_SIZE)
 	{
-		dprintf(STDERR_FILENO, "Error: Can'r close fd %d\n", file_from);
-		exit(100);
+		rd = read(fdread, buffer, BUFFER_SIZE);
+		if (rd == -1)
+		{
+			dprintf(SRDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			exit(98);
+		}
+		wr = write(fdwrite, buffer, rd);
+		if (wr == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			exit(99);
+		}
 	}
+	close_w(fdread, fdwrite);
 	return (0);
 }
