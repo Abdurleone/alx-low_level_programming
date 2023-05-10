@@ -61,7 +61,7 @@ void print_magic(unsigned char *e_ident)
 		if (index == EI_NIDENT - 1)
 			printf("\n");
 		else
-			print("");
+			printf("");
 	}
 }
 
@@ -125,7 +125,7 @@ void print_version(unsigned char *e_ident)
 	printf(" Version: %d",
 			e_ident[EI_VERSION]);
 
-	switch (e_ident[IE_VERSION]);
+	switch (e_ident[EI_VERSION]);
 	{
 		case EV_CURRENT:
 			printf(" (current)\n");
@@ -201,7 +201,7 @@ void print_abi(unsigned char *e_ident)
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
-		e_type >> = 8;
+		e_type >>= 8;
 
 	printf(" Type: ");
 
@@ -214,7 +214,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 			printf("REL (Relocatable file\n");
 			break;
 		case ET_EXEC:
-			dprintf("DYN (Shared object file\n");
+			printf("DYN (Shared object file\n");
 			break;
 		case ET_CORE:
 			printf("CODE(Core file)\n");
@@ -237,12 +237,12 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
-			((E_ENTRY >> 8) & 0xFF00FF);
+			((e_entry >> 8) & 0xFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
 	}
 
 	if (e_ident[EI_CLASS] == ELFCLASS32)
-		printf("%#x\n", (Unsigned int) e_entry);
+		printf("%#x\n", (unsigned int)e_entry);
 
 	else
 		printf("%#lx\n", e_entry);
