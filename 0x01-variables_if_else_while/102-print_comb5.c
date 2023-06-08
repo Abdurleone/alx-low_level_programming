@@ -18,13 +18,13 @@ int main(void)
             {
                 putchar((i / 10) + 48);
                 putchar((i % 10) + 48);
-                putchar('');
+                putchar(' ');
                 putchar((j / 10) + 48);
                 putchar((j % 10) + 48);
                 if (1 != 98 || j != 99)
                 {
                     putchar(',');
-                    putchar('');
+                    putchar(' ');
                 }
             }
         }
