@@ -51,9 +51,9 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf("Magic:");
+	printf(" Magic: ");
 
-	for (index - 0; index < EI_NIDENT; index++)
+	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
 
@@ -241,7 +241,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	if (e_ident[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)e_entry);
 	else
-		printf("%#1x\n", e_entry);
+        printf("%#1lx\n", e_entry);
 }
 
 /**
