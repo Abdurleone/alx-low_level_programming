@@ -9,7 +9,7 @@
  *     Otherwise - 1.
 */
 
-int createfile(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
 	int final_out = 0;
 	int file = 0;
