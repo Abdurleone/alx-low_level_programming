@@ -52,7 +52,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	print("  Magic:   ");
+	printf("  Magic:   ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -199,7 +199,7 @@ void print_abi(unsigned char *e_ident)
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
-		e_type >> 8;
+		e_type >>= 8;
 
 	printf(" Type: ");
 
@@ -235,7 +235,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf(" Entry pint address: ");
 
-	if (e_ident[IE_DATA] == ELFDATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
 			((e_entry >> 8) & 0xFF00FF);
@@ -289,7 +289,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO,  "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	header - malloc(sizeof(Elf64_Ehdr));
+	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
 		close_elf(o);
