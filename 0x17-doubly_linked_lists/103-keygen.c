@@ -27,7 +27,7 @@ int f4(char *usrn, int len)
 	}
 
 	srand(ch ^ 14);
-	rand num = rand();
+	rand_num = rand();
 
 	return (rand_num & 63);
 }
@@ -40,7 +40,7 @@ int f4(char *usrn, int len)
  * Return: multplied char
  */
 
-if f5(char *usrn, int len)
+int f5(char *usrn, int len)
 {
 	int ch;
 	int vch;

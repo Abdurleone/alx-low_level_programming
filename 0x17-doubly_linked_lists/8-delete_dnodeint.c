@@ -1,4 +1,4 @@
-#include "lsits.h"
+#include "lists.h"
 
 /**
  * delete_dnodeint_at_index - deletes the nde at index of a
@@ -13,7 +13,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *h1;
 	dlistint_t *h2;
-	unsgined int i;
+	unsigned int i;
 
 	h1 = *head;
 
