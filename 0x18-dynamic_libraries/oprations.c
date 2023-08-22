@@ -49,7 +49,7 @@ int mul(int i, int k)
 
 int div(int i, int k)
 {
-	return (i / k)
+	return (i / k);
 }
 
 /**
@@ -59,7 +59,7 @@ int div(int i, int k)
  * Return: the modulus
  */
 
-int div(int i, int k)
+int mod(int i, int k)
 {
-        return (i % k)
+        return (i % k);
 }
