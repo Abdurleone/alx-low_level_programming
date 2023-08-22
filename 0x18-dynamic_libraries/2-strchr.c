@@ -10,7 +10,7 @@
  * c in the string s, or NULL if character is not found
  */
 
-char *strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	int a;
 
