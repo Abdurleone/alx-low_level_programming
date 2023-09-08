@@ -16,9 +16,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
     if (ht == NULL || *key == 48 || key == NULL)
              return (NULL);
 
-    index = key_index((const unsigned char *)key, ht->size);
+    idx = key_index((const unsigned char *)key, ht->size);
 
-    if (index >= ht->size)
+    if (idx >= ht->size)
             return (NULL);
 
     for (current_node = ht->array[idx];
