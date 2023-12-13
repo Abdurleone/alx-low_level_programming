@@ -33,25 +33,25 @@ At the end of this project, Iwas able to solve these questions:
 
 | Filename |
 | ------ |
-| [0-linear.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/0-linear.c)|
-| [1-binary.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/1-binary.c)|
-| [2-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/2-O)|
-| [3-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/3-O)|
-| [2-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1B-sorting_algorithms/2-O)|
-| [2-selection_sort.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1B-sorting_algorithms/2-selection_sort.c)|
-| [3-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1B-sorting_algorithms/3-O)|
-| [4-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/4-O)|
-| [5-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/5-O)|
-| [6-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/6-O)|
-| [100-jump.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/100-jump.c)|
-| [101-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/101-O)|
-| [102-interpolation.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/102-interpolation.c)|
+| [0-linear.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/0-linear.c)|
+| [1-binary.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/1-binary.c)|
+| [2-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/2-O)|
+| [3-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/3-O)|
+| [2-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1B-sorting_algorithms/2-O)|
+| [2-selection_sort.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1B-sorting_algorithms/2-selection_sort.c)|
+| [3-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1B-sorting_algorithms/3-O)|
+| [4-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/4-O)|
+| [5-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/5-O)|
+| [6-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/6-O)|
+| [100-jump.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/100-jump.c)|
+| [101-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/101-O)|
+| [102-interpolation.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/102-interpolation.c)|
 | 103-exponential.c - Pending task|
-| [104-advanced_binary.c](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/104-advanced_binary.c)|
+| [104-advanced_binary.c](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/104-advanced_binary.c)|
 | 105-jump_list.c - Pending task|
 | 106-linear_skip.c - Pending task|
-| [107-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/107-O)|
-| [108-O](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/108-O)|
+| [107-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/107-O)|
+| [108-O](https://github.com/abdurleone/alx-low_level_programming/blob/master/0x1E-search_algorithms/108-O)|
 
 ## Additional info :construction:
 ### Resources
